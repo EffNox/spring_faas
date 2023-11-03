@@ -1,0 +1,31 @@
+###~###~###~###~###~###
+GET {{URL}}/function/PEPE
+Authorization: 947cf9e2-1765-4635-e980-dd2a966700cd
+
+###~###~###~###~###~###
+POST {{URL}}/consumer
+
+data
+
+###~###~###~###~###~###
+GET {{URL}}/supply
+
+###~###~###~###~###~###
+POST {{URL}}/mapjson
+
+{
+    "a": "EffNox T",
+    "b": [1,2,3,4,8,9]
+}
+
+###~###~###~###~###~###
+POST {{URL}}/mapobject
+
+{
+    "name": "EffNox",
+    "lst": [1,2,3,4]
+}
+
+###~###~###~###~###~###
+GET {{URL}}/mapmessage
+Authorization: 947cf9e2-1765-4635-e980-dd2a966700cd
