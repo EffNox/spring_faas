@@ -4,3 +4,18 @@ spring:
 server:
   port: ${PORT:${SERVER_PORT:8080}}
   server-header: ${spring.application.name}
+  compression.enabled: true
+logging.level:
+  '[org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver]': off
+  '[org.springframework.boot.web.servlet.context.ServletWebServerApplicationContext]': off
+
+  '[org.springframework.boot.devtools]': off
+  '[org.springframework.data.repository.config.RepositoryConfigurationDelegate]': off
+  '[org.springframework.orm.jpa]': off
+  '[org.hibernate.jpa.internal.util.LogHelper]': off
+  '[org.apache.catalina]': off
+  '[com.zaxxer.hikari]': off
+  '[org.hibernate]': off
+  '[nr]': off
+  '[org.springframework.web.servlet.DispatcherServlet]': off
+  '[org.springframework.cloud.function.web.mvc.FunctionHandlerMapping]': off
