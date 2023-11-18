@@ -1,3 +1,5 @@
+@URL = http://localhost:{{$dotenv SERVER_PORT}}
+
 ###~###~###~###~###~###
 GET {{URL}}/function/PEPE
 Authorization: 947cf9e2-1765-4635-e980-dd2a966700cd

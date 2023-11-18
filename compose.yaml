@@ -1,0 +1,11 @@
+version: '3.9'
+
+services:
+  app_faas:
+    image: effnox/spring-faas
+    container_name: spring-faas
+    build:
+      context: .
+      dockerfile: Dockerfile.jre
+    env_file: .env
+    ports: ["${SERVER_PORT}:${SERVER_PORT}"]

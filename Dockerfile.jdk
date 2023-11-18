@@ -1,0 +1,20 @@
+# https://hub.docker.com/_/maven/tags?page=1&name=openjdk
+FROM maven:eclipse-temurin-18-alpine AS MAVEN_BUILD
+
+WORKDIR /build/
+
+COPY pom.xml /build/
+COPY src /build/src/
+
+RUN mvn clean package
+
+FROM openjdk:18-jdk-alpine3.15
+
+ARG JAR_FILE=/build/target/*.jar
+
+# WORKDIR /app
+# COPY --from=MAVEN_BUILD ${JAR_FILE} /app/app.jar
+
+COPY --from=MAVEN_BUILD ${JAR_FILE} app.jar
+
+ENTRYPOINT ["java", "-jar", "app.jar"]

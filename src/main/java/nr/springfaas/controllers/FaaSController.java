@@ -35,7 +35,7 @@ public class FaaSController {
         };
     }
 
-    /*  */
+    /* Objects */
 
     @Bean
     Function<Map<String, Object>, String> mapjson() {
